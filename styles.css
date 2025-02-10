@@ -1,155 +1,123 @@
 /* Ajustar la imagen de fondo sin que se estire */
 body {
-    background-image: url('snoopy1.jpg'); /* Asegúrate de que la imagen esté en la misma carpeta */
-    background-size: contain; /* Ajusta la imagen para que se vea completa */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('snoopy1.jpg');
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed; /* Mantiene la imagen fija en la pantalla */
 }
 
-/* Si usas imágenes dentro del contenido */
-img {
-    max-width: 100%; /* La imagen nunca será más grande que su contenedor */
-    height: auto; /* Mantiene la proporción original */
-    display: block; /* Evita márgenes extra */
-    margin: 0 auto; /* Centra la imagen */
-}
-
-/* General Styles */
-body {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-image: url('snoopy1.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-/* Container Styles */
+/* Contenedor principal */
 .container {
-  background: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-  width: 80%;
-  max-width: 500px;
-  text-align: center; /* Centra el contenido */
+    background: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 500px;
+    text-align: center; /* Centra el contenido */
 }
 
-/* Title and Text */
+/* Títulos y texto */
 h1, p {
-  font-family: 'Arial', sans-serif;
-  font-size: 2rem;
-  color: #d63384; /* Rosa fuerte */
-  text-align: center;
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8); /* Contorno blanco */
+    font-family: 'Arial', sans-serif;
+    font-size: 2rem;
+    color: #d63384; /* Rosa fuerte */
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8); /* Contorno blanco */
 }
 
-/* Button General Styles */
+/* Estilos de los botones */
 button {
-  font-size: 1.5rem;
-  padding: 10px 20px;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.2s, background-color 0.2s;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
 }
 
 /* Botón "Tócame" */
 #discover {
-  background-color: #ff69b4;
-  color: white;
-  display: block;
-  margin: 20px auto; /* Centra el botón */
+    background-color: #ff69b4;
+    color: white;
+    display: block;
+    margin: 20px auto;
 }
 
 #discover:hover {
-  transform: scale(1.1);
-  background-color: #ff1493;
+    transform: scale(1.1);
+    background-color: #ff1493;
 }
 
 /* Contenedor de los botones "Sí" y "No" */
 #options {
-  display: flex;
-  justify-content: center; /* Centra los botones */
-  gap: 20px;
-  margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
 }
 
 /* Botón "Sí" */
 #yes {
-  background-color: #28a745;
-  color: white;
+    background-color: #28a745;
+    color: white;
 }
 
 #yes:hover {
-  background-color: #218838;
+    background-color: #218838;
 }
 
 /* Botón "No" */
 #no {
-  background-color: #dc3545;
-  color: white;
+    background-color: #dc3545;
+    color: white;
 }
 
 #no:hover {
-  background-color: #c82333;
+    background-color: #c82333;
 }
 
-/* Hidden Message Styles */
+/* Estilos para ocultar el mensaje */
 .hidden {
-  display: none;
-  margin-top: 20px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  animation: fadeIn 1s ease-in-out;
+    display: none;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    animation: fadeIn 1s ease-in-out;
 }
 
-/* Animations */
+/* Animaciones */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  /* Animación de crecimiento */
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de crecimiento */
 @keyframes grow {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.2);
-  }
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
 }
 
-/* Botón "Sí" (se agranda con cada clic en "No") */
-#yes {
-  background-color: #28a745;
-  color: white;
-  transition: all 0.3s ease-in-out;
+/* Aumentar tamaño del botón "Sí" cada vez que se presiona "No" */
+.grow {
+    animation: grow 0.3s forwards;
 }
 
-#yes:hover {
-  background-color: #218838;
-}
-
-/* Botón "No" */
-#no {
-  background-color: #dc3545;
-  color: white;
-}
-
-#no:hover {
-  background-color: #c82333;
-}
-
-}
 
