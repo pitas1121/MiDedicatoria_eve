@@ -3,10 +3,12 @@ let yesButton = document.getElementById("yes");
 let noButton = document.getElementById("no");
 let message = document.getElementById("message");
 let title = document.querySelector("h1");
-let paragraph = document.querySelector(".card p"); // Selecciona el párrafo del mensaje principal
+let paragraph = document.querySelector(".card p"); // Selecciona el párrafo principal
 let backgroundImages = ["gatoxd.jpg", "tite.jpeg", "wtf.jpeg"]; // Imágenes en orden
+let messages = ["¿Estás segura de esto?", "Piensa bien tu decisión...", "Todavía puedes cambiar de opinión...", "Esto duele... 💔", "No lo hagas... 😭", "Me estás rompiendo el corazón..."]; // Mensajes en orden
 let sound = new Audio("Besos_Usados.mp3"); // Sonido de fondo
 let currentImageIndex = 0;
+let currentMessageIndex = 0;
 let growthFactor = 1.2; // Factor de crecimiento del botón "Sí"
 let firstClick = true; // Para controlar el primer clic
 
@@ -18,12 +20,16 @@ noButton.addEventListener("click", function () {
     paragraph.style.display = "none";
 
     // Cambiar el mensaje inicial
-    message.innerText = "¿Estás segura de esto?";
+    message.innerText = messages[currentMessageIndex];
+
+    // Reproducir música
+    sound.play();
 
     firstClick = false; // Ya no es el primer clic
   } else {
-    // En los siguientes clics, cambiar el mensaje de fondo
-    message.innerText = "¡¿Cómo pudiste?! 😭";
+    // Cambiar el mensaje cada vez que se presiona "No"
+    currentMessageIndex = (currentMessageIndex + 1) % messages.length;
+    message.innerText = messages[currentMessageIndex];
 
     // Cambiar la imagen de fondo (cicla entre las imágenes)
     currentImageIndex = (currentImageIndex + 1) % backgroundImages.length;
@@ -35,10 +41,6 @@ noButton.addEventListener("click", function () {
 
     yesButton.style.fontSize = newFontSize + "px";
     yesButton.style.padding = `${newFontSize / 3}px ${newFontSize / 2}px`; // Ajuste proporcional
-
-    // Reproducir sonido (reinicia en cada clic)
-    sound.currentTime = 0;
-    sound.play();
 
     // Si el botón "Sí" es demasiado grande, ocultar el botón "No"
     if (newFontSize > 100) {
@@ -56,6 +58,7 @@ document.getElementById("discover").addEventListener("click", function () {
   // Ocultar el botón principal
   this.style.display = "none";
 });
+
 
 
 
