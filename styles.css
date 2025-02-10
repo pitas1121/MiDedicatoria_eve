@@ -36,20 +36,30 @@ body {
 /* Title and Text */
 h1 {
   font-family: 'Arial', sans-serif; /* Cambia la fuente a algo más limpio */
-  font-size: 2.5rem; /* Aumenta el tamaño del título */
+  font-size: 3rem; /* Aumenta el tamaño del título */
   color: #ffffff; /* Cambia el color a blanco */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Añade sombra al texto */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Añade sombra al texto */
 }
 
 p {
   font-family: 'Georgia', serif; /* Usa una fuente elegante para el texto */
-  font-size: 1.2rem; /* Ajusta el tamaño del texto */
-  color: #f0f0f0; /* Un color suave */
+  font-size: 1.4rem; /* Ajusta el tamaño del texto */
+  color: #f8f8f8; /* Un color suave */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 
 /* Button */
 button {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #ff69b4; /* Color rosa */
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, background-color 0.2s;
     background: white;
     color: #ff758c;
     border: none;
@@ -63,8 +73,8 @@ button {
 }
 
 button:hover {
-    background: #ffe0ec;
-    transform: scale(1.05);
+  transform: scale(1.1);
+  background-color: #ff1493;
 }
 
 /* Hidden Message */
