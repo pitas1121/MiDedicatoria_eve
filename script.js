@@ -14,8 +14,12 @@ let firstClick = true; // Para controlar el primer clic
 
 // Evento para el botón "No"
 noButton.addEventListener("click", function () {
+  // Cambiar la imagen de fondo en cada clic (incluido el primero)
+  document.body.style.backgroundImage = `url('${backgroundImages[currentImageIndex]}')`;
+  currentImageIndex = (currentImageIndex + 1) % backgroundImages.length; // Rotar imágenes
+
   if (firstClick) {
-    // Ocultar el título y el párrafo principal la primera vez que se presiona "No"
+    // Ocultar el título y el párrafo principal en el primer clic
     title.style.display = "none";
     paragraph.style.display = "none";
 
@@ -27,15 +31,11 @@ noButton.addEventListener("click", function () {
 
     firstClick = false; // Ya no es el primer clic
   } else {
-    // Cambiar el mensaje cada vez que se presiona "No"
+    // Cambiar el mensaje en cada clic
     currentMessageIndex = (currentMessageIndex + 1) % messages.length;
     message.innerText = messages[currentMessageIndex];
 
-    // Cambiar la imagen de fondo (cicla entre las imágenes)
-    currentImageIndex = (currentImageIndex + 1) % backgroundImages.length;
-    document.body.style.backgroundImage = `url('${backgroundImages[currentImageIndex]}')`;
-
-    // Hacer crecer el botón "Sí" de manera proporcional
+    // Hacer crecer el botón "Sí"
     let currentFontSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
     let newFontSize = currentFontSize * growthFactor;
 
@@ -58,6 +58,7 @@ document.getElementById("discover").addEventListener("click", function () {
   // Ocultar el botón principal
   this.style.display = "none";
 });
+
 
 
 
