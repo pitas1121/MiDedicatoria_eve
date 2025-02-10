@@ -1,3 +1,20 @@
+/* Ajustar la imagen de fondo sin que se estire */
+body {
+    background-image: url('snoopy1.jpg'); /* Asegúrate de que la imagen esté en la misma carpeta */
+    background-size: contain; /* Ajusta la imagen para que se vea completa */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; /* Mantiene la imagen fija en la pantalla */
+}
+
+/* Si usas imágenes dentro del contenido */
+img {
+    max-width: 100%; /* La imagen nunca será más grande que su contenedor */
+    height: auto; /* Mantiene la proporción original */
+    display: block; /* Evita márgenes extra */
+    margin: 0 auto; /* Centra la imagen */
+}
+
 /* General Styles */
 body {
   margin: 0;
