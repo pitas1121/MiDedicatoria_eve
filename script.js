@@ -1,31 +1,34 @@
+// Selección de elementos
 let yesButton = document.getElementById("yes");
 let noButton = document.getElementById("no");
 let message = document.getElementById("message");
-let backgroundImages = ["gatoxd.jpg", "tite.jpeg", "wtf.jpeg"]; // Agrega más imágenes
-let sound = new Audio("Besos_Usados.mp3"); // Agrega un sonido de tristeza
+let backgroundImages = ["gatoxd.jpg", "tite.jpeg", "wtf.jpeg"]; // Imágenes en orden
+let sound = new Audio("Besos_Usados.mp3"); // Sonido de fondo
 let currentImageIndex = 0;
 let growthFactor = 1.2; // Factor de crecimiento del botón "Sí"
 
 // Evento para el botón "No"
 noButton.addEventListener("click", function () {
-  // Cambiar el mensaje
+  // Cambiar el mensaje de fondo
   message.innerText = "¡¿Cómo pudiste?! 😭";
 
-  // Reproducir sonido
+  // Reproducir sonido (reinicia en cada clic)
+  sound.currentTime = 0;
   sound.play();
 
-  // Cambiar la imagen de fondo
+  // Cambiar la imagen de fondo (cicla entre las imágenes)
   currentImageIndex = (currentImageIndex + 1) % backgroundImages.length;
   document.body.style.backgroundImage = `url('${backgroundImages[currentImageIndex]}')`;
 
-  // Hacer crecer el botón "Sí"
-  let currentSize = window.getComputedStyle(yesButton).fontSize;
-  let newSize = parseFloat(currentSize) * growthFactor + "px";
-  yesButton.style.fontSize = newSize;
-  yesButton.style.padding = "15px 30px"; // Para que crezca proporcionalmente
+  // Hacer crecer el botón "Sí" de manera proporcional
+  let currentFontSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
+  let newFontSize = currentFontSize * growthFactor;
+  
+  yesButton.style.fontSize = newFontSize + "px";
+  yesButton.style.padding = `${newFontSize / 3}px ${newFontSize / 2}px`; // Ajuste proporcional
 
   // Si el botón "Sí" es demasiado grande, ocultar el botón "No"
-  if (parseFloat(newSize) > 100) {
+  if (newFontSize > 100) {
     noButton.style.display = "none";
   }
 });
@@ -39,5 +42,6 @@ document.getElementById("discover").addEventListener("click", function () {
   // Ocultar el botón principal
   this.style.display = "none";
 });
+
 
 
