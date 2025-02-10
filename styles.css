@@ -1,10 +1,3 @@
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center; /* Centra el texto dentro del contenedor */
-}
 /* General Styles */
 body {
   margin: 0;
@@ -14,84 +7,85 @@ body {
   align-items: center;
   height: 100vh;
   background-image: url('snoopy1.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url('snoopy1.jpg');
   background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center; /* Centra la imagen */
 }
 
-
+/* Container Styles */
 .container {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-    width: 80%;
-    max-width: 500px;
+  background: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 500px;
+  text-align: center; /* Centra el contenido de texto */
 }
 
 /* Title and Text */
 h1 {
-  font-family: 'Arial', sans-serif; /* Cambia la fuente a algo más limpio */
-  font-size: 3rem; /* Aumenta el tamaño del título */
-  color: #ffffff; /* Cambia el color a blanco */
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Añade sombra al texto */
+  font-family: 'Arial', sans-serif; /* Fuente limpia y moderna */
+  font-size: 3rem; /* Tamaño grande para el título */
+  color: #ffffff; /* Texto blanco */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Sombra para mejor legibilidad */
 }
 
 p {
-  font-family: 'Georgia', serif; /* Usa una fuente elegante para el texto */
-  font-size: 1.4rem; /* Ajusta el tamaño del texto */
-  color: #f8f8f8; /* Un color suave */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Georgia', serif; /* Fuente elegante */
+  font-size: 1.4rem; /* Tamaño mediano */
+  color: #f8f8f8; /* Color suave */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para contraste */
 }
 
-
-/* Button */
+/* Button Styles */
 button {
-  font-size: 1.5rem;
-  padding: 10px 20px;
-  border-radius: 10px;
+  font-size: 1.5rem; /* Tamaño del texto del botón */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
   background-color: #ff69b4; /* Color rosa */
-  color: #ffffff;
-  border: none;
+  color: #ffffff; /* Texto blanco */
+  border: none; /* Sin borde */
   cursor: pointer;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.2s, background-color 0.2s;
-    background: white;
-    color: #ff758c;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, background 0.3s ease;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Sombra para efecto de profundidad */
+  transition: transform 0.2s, background-color 0.2s; /* Transición suave */
 }
 
 button:hover {
-  transform: scale(1.1);
-  background-color: #ff1493;
+  transform: scale(1.1); /* Agranda el botón al pasar el mouse */
+  background-color: #ff1493; /* Cambia a un rosa más intenso */
 }
 
-/* Hidden Message */
+/* Hidden Message Styles */
 .hidden {
-    display: none;
-    margin-top: 20px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    animation: fadeIn 1s ease-in-out;
+  display: none; /* Oculta el mensaje por defecto */
+  margin-top: 20px;
+  font-size: 1.5rem; /* Tamaño del texto del mensaje */
+  font-weight: bold;
+  animation: fadeIn 1s ease-in-out; /* Animación de aparición */
+}
+
+/* Card Styles */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Centra el texto dentro del contenedor */
 }
 
 /* Animations */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
+  from {
+    opacity: 0; /* Comienza transparente */
+    transform: translateY(10px); /* Se mueve hacia arriba */
+  }
+  to {
+    opacity: 1; /* Aparece completamente */
+    transform: translateY(0); /* Posición original */
+  }
+}
+
     to {
         opacity: 1;
         transform: translateY(0);
