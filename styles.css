@@ -25,69 +25,84 @@ body {
 
 /* Title and Text */
 h1 {
-  font-family: 'Arial', sans-serif; /* Fuente limpia y moderna */
-  font-size: 3rem; /* Tamaño grande para el título */
-  color: #ffffff; /* Texto blanco */
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Sombra para mejor legibilidad */
+  font-family: 'Arial', sans-serif;
+  font-size: 3rem;
+  color: #d63384; /* Rosa fuerte */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
 }
 
 p {
-  font-family: 'Georgia', serif; /* Fuente elegante */
-  font-size: 1.4rem; /* Tamaño mediano */
-  color: #f8f8f8; /* Color suave */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para contraste */
+  font-family: 'Georgia', serif;
+  font-size: 1.4rem;
+  color: #d63384; /* Rosa fuerte */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Button Styles */
+/* Button General Styles */
 button {
-  font-size: 1.5rem; /* Tamaño del texto del botón */
-  padding: 10px 20px; /* Espaciado interno */
-  border-radius: 10px; /* Bordes redondeados */
-  background-color: #ff69b4; /* Color rosa */
-  color: #ffffff; /* Texto blanco */
-  border: none; /* Sin borde */
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
   cursor: pointer;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Sombra para efecto de profundidad */
-  transition: transform 0.2s, background-color 0.2s; /* Transición suave */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, background-color 0.2s;
 }
 
-button:hover {
-  transform: scale(1.1); /* Agranda el botón al pasar el mouse */
-  background-color: #ff1493; /* Cambia a un rosa más intenso */
+/* Botón "Tócame" */
+#discover {
+  background-color: #ff69b4; /* Rosa */
+  color: white;
+}
+
+#discover:hover {
+  transform: scale(1.1);
+  background-color: #ff1493; /* Rosa más intenso */
+}
+
+/* Estilos para los botones "Sí" y "No" */
+#options {
+  display: flex;
+  gap: 20px; /* Espacio entre los botones */
+  margin-top: 20px;
+}
+
+#yes {
+  background-color: #28a745; /* Verde */
+  color: white;
+}
+
+#yes:hover {
+  background-color: #218838; /* Verde más oscuro */
+}
+
+#no {
+  background-color: #dc3545; /* Rojo */
+  color: white;
+}
+
+#no:hover {
+  background-color: #c82333; /* Rojo más oscuro */
 }
 
 /* Hidden Message Styles */
 .hidden {
-  display: none; /* Oculta el mensaje por defecto */
+  display: none;
   margin-top: 20px;
-  font-size: 1.5rem; /* Tamaño del texto del mensaje */
+  font-size: 1.5rem;
   font-weight: bold;
-  animation: fadeIn 1s ease-in-out; /* Animación de aparición */
-}
-
-/* Card Styles */
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center; /* Centra el texto dentro del contenedor */
+  animation: fadeIn 1s ease-in-out;
 }
 
 /* Animations */
 @keyframes fadeIn {
   from {
-    opacity: 0; /* Comienza transparente */
-    transform: translateY(10px); /* Se mueve hacia arriba */
+    opacity: 0;
+    transform: translateY(10px);
   }
   to {
-    opacity: 1; /* Aparece completamente */
-    transform: translateY(0); /* Posición original */
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
