@@ -1,7 +1,7 @@
 let yesButton = document.getElementById("yes");
 let noButton = document.getElementById("no");
 let message = document.getElementById("message");
-let backgroundImages = ["gatoxd.jpg", "tite.jpeg", "imagen3.jpg"]; // Agrega más imágenes
+let backgroundImages = ["gatoxd.jpg", "tite.jpeg", "wtf.jpeg"]; // Agrega más imágenes
 let sound = new Audio("Besos_Usados.mp3"); // Agrega un sonido de tristeza
 let currentImageIndex = 0;
 let growthFactor = 1.2; // Factor de crecimiento del botón "Sí"
