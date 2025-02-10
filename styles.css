@@ -103,5 +103,36 @@ button {
     opacity: 1;
     transform: translateY(0);
   }
+  /* Animación de crecimiento */
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+/* Botón "Sí" (se agranda con cada clic en "No") */
+#yes {
+  background-color: #28a745;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+#yes:hover {
+  background-color: #218838;
+}
+
+/* Botón "No" */
+#no {
+  background-color: #dc3545;
+  color: white;
+}
+
+#no:hover {
+  background-color: #c82333;
+}
+
 }
 
