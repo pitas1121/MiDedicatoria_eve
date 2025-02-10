@@ -40,13 +40,4 @@ document.getElementById("discover").addEventListener("click", function () {
   this.style.display = "none";
 });
 
-// Evento para el botón "Sí"
-document.getElementById("yes").addEventListener("click", function () {
-  alert("¡Gracias! 💖 Eres la mejor decisión que he tomado.");
-});
-
-// Evento para el botón "No"
-document.getElementById("no").addEventListener("click", function () {
-  alert("Oh, está bien... 😢 Siempre serás especial.");
-});
 
