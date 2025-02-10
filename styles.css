@@ -1,5 +1,22 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Centra el texto dentro del contenedor */
+}
 /* General Styles */
 body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('snoopy.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   background-image: url('snoopy.jpg');
   background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -18,15 +35,18 @@ body {
 
 /* Title and Text */
 h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  font-family: 'Arial', sans-serif; /* Cambia la fuente a algo más limpio */
+  font-size: 2.5rem; /* Aumenta el tamaño del título */
+  color: #ffffff; /* Cambia el color a blanco */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Añade sombra al texto */
 }
 
 p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+  font-family: 'Georgia', serif; /* Usa una fuente elegante para el texto */
+  font-size: 1.2rem; /* Ajusta el tamaño del texto */
+  color: #f0f0f0; /* Un color suave */
 }
+
 
 /* Button */
 button {
