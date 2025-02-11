@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
         // Evento cuando se presiona "No"
         noBtn.addEventListener("click", function () {
-            alert("😢 Bueno... lo intentaré de nuevo otro día.");
+           
         });
     } else {
         console.error("❌ Error: Uno o más elementos no fueron encontrados en el HTML.");
