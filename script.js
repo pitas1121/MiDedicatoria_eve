@@ -50,33 +50,40 @@ yesButton.addEventListener("click", function () {
   // Reproducir la música feliz
   soundYes.play();
 
-  // Ocultar todo el contenido de la página
+  // Ocultar todos los elementos dentro del contenedor
   container.style.display = "none";
+  message.style.display = "none";
+  noButton.style.display = "none";
+  yesButton.style.display = "none";
+
+  // Crear un contenedor para centrar el mensaje y la imagen
+  let contentWrapper = document.createElement("div");
+  contentWrapper.style.position = "fixed";
+  contentWrapper.style.top = "50%";
+  contentWrapper.style.left = "50%";
+  contentWrapper.style.transform = "translate(-50%, -50%)";
+  contentWrapper.style.textAlign = "center";
+  contentWrapper.style.color = "white";
 
   // Crear un mensaje bonito arriba de la imagen
   let happyMessage = document.createElement("h2");
   happyMessage.innerText = "¡Sabía que dirías que sí! ❤️";
-  happyMessage.style.position = "fixed";
-  happyMessage.style.top = "10%";
-  happyMessage.style.left = "50%";
-  happyMessage.style.transform = "translateX(-50%)";
-  happyMessage.style.color = "white";
   happyMessage.style.fontSize = "2rem";
   happyMessage.style.fontFamily = "Arial, sans-serif";
   happyMessage.style.textShadow = "2px 2px 5px rgba(0,0,0,0.5)";
-  document.body.appendChild(happyMessage);
 
   // Crear y mostrar la imagen en pantalla
   let happyImage = document.createElement("img");
   happyImage.src = imageSrc;
-  happyImage.style.position = "fixed";
-  happyImage.style.top = "50%";
-  happyImage.style.left = "50%";
-  happyImage.style.transform = "translate(-50%, -50%)";
   happyImage.style.width = "60vw"; // Ajustar el tamaño de la imagen
   happyImage.style.borderRadius = "20px"; // Bordes redondeados
   happyImage.style.boxShadow = "5px 5px 15px rgba(0, 0, 0, 0.5)";
-  document.body.appendChild(happyImage);
+  happyImage.style.marginTop = "20px"; // Espacio entre el mensaje y la imagen
+
+  // Agregar elementos al contenedor y luego a la página
+  contentWrapper.appendChild(happyMessage);
+  contentWrapper.appendChild(happyImage);
+  document.body.appendChild(contentWrapper);
 });
 
 // Evento para el botón "Tócame"
@@ -85,6 +92,7 @@ document.getElementById("discover").addEventListener("click", function () {
   document.getElementById("options").style.display = "flex";
   this.style.display = "none";
 });
+
 
 
 
