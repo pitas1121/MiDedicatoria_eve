@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("¡Sabía que dirías que sí! 💖");
             
             // Cambia el fondo de la página
-            document.body.style.backgroundImage = "url('snoopyfeliz.jpg')";
+            document.body.style.backgroundImage = "url('eve.jpg')";
             document.body.style.backgroundSize = "cover";
             document.body.style.backgroundPosition = "center";
 
