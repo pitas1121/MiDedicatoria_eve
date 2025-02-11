@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
         yesBtn.addEventListener("click", function () {
            alert("¡Sabía que dirías que sí! 💖");
     document.body.style.backgroundColor = "pink"; // Cambia el fondo
-    document.body.style.backgroundImage = "url('URL_DE_TU_NUEVA_IMAGEN')"; // Cambia la imagen de fondo
+    document.body.style.backgroundImage = "url('snoopyfeliz.jpg')"; 
 });
         // Evento cuando se presiona "No"
         noBtn.addEventListener("click", function () {
