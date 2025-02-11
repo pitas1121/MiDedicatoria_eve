@@ -8,7 +8,7 @@ let backgroundImages = ["gatoxd.jpg", "tite.jpeg", "wtf.jpeg"]; // Imágenes cua
 let messages = ["¿Estás segura de esto?", "Piensa bien tu decisión...", "Todavía puedes cambiar de opinión...", "Esto duele... 💔", "No lo hagas... 😭", "Me estás rompiendo el corazón..."]; // Mensajes cuando presionas "No"
 let soundNo = new Audio("Besos_Usados.mp3"); // Canción triste para el "No"
 let soundYes = new Audio("Felicidad.mp3"); // Canción feliz para el "Sí"
-let videoSrc = "video_feliz.mp4"; // Video cuando presionas "Sí"
+let yesImage = "felices.jpg"; // Imagen cuando presionas "Sí"
 let currentImageIndex = 0;
 let currentMessageIndex = 0;
 let growthFactor = 1.2;
@@ -50,25 +50,16 @@ yesButton.addEventListener("click", function () {
   // Reproducir la canción feliz
   soundYes.play();
 
-  // Ocultar el fondo y los botones
-  document.body.style.backgroundImage = "none";
-  yesButton.style.display = "none";
-  noButton.style.display = "none";
+  // Cambiar la imagen de fondo
+  document.body.style.backgroundImage = `url('${yesImage}')`;
+
+  // Cambiar el mensaje a algo bonito
   message.innerText = "¡Sabía que dirías que sí! 💖✨";
 
-  // Crear el video y agregarlo al body
-  let video = document.createElement("video");
-  video.src = videoSrc;
-  video.autoplay = true;
-  video.controls = true;
-  video.style.position = "fixed";
-  video.style.top = "50%";
-  video.style.left = "50%";
-  video.style.transform = "translate(-50%, -50%)";
-  video.style.width = "80vw";
-  video.style.height = "auto";
-  document.body.appendChild(video);
+  // Ocultar el botón "No" (ya no tiene sentido seguir rechazando)
+  noButton.style.display = "none";
 });
+
 
 
 
