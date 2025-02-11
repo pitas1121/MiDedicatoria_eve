@@ -1,3 +1,34 @@
+// Esperar a que el DOM cargue completamente
+document.addEventListener("DOMContentLoaded", function () {
+    let discoverBtn = document.getElementById("discover");
+    let message = document.getElementById("message");
+    let options = document.getElementById("options");
+    let yesBtn = document.getElementById("yes");
+    let noBtn = document.getElementById("no");
+
+    // Verificar si los elementos existen antes de usarlos
+    if (discoverBtn && message && options && yesBtn && noBtn) {
+        // Evento para mostrar el mensaje y opciones
+        discoverBtn.addEventListener("click", function () {
+            message.style.display = "block";
+            options.style.display = "block";
+        });
+
+        // Evento cuando se presiona "Sí"
+        yesBtn.addEventListener("click", function () {
+            alert("¡Sabía que dirías que sí! 💖");
+            document.body.style.backgroundColor = "pink"; // Efecto visual
+        });
+
+        // Evento cuando se presiona "No"
+        noBtn.addEventListener("click", function () {
+            alert("😢 Bueno... lo intentaré de nuevo otro día.");
+        });
+    } else {
+        console.error("❌ Error: Uno o más elementos no fueron encontrados en el HTML.");
+    }
+});
+
 // Selección de elementos
 document.addEventListener("DOMContentLoaded", function () {
   let yesButton = document.getElementById("yes");
