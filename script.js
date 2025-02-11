@@ -148,6 +148,23 @@ document.addEventListener("DOMContentLoaded", function () {
     happyImage.style.width = "300px";
     happyImage.style.borderRadius = "20px";
     happyImage.style.boxShadow = "5px 5px 15px rgba(0, 0, 0, 0.5)";
+       // Nuevo mensaje bonito sobre la imagen
+    let loveMessage = document.createElement("p");
+    loveMessage.innerHTML = "Te quiero mucho, Eve 💖💕";
+    loveMessage.style.fontSize = "1.5rem";
+    loveMessage.style.fontFamily = "cursive";
+    loveMessage.style.marginTop = "20px";
+    loveMessage.style.animation = "fadeIn 3s ease-in-out infinite alternate";
+
+    // Agregar animación en CSS
+    let style = document.createElement("style");
+    style.innerHTML = `
+        @keyframes fadeIn {
+            from { opacity: 0.3; }
+            to { opacity: 1; }
+        }
+    `;
+    document.head.appendChild(style);
 
     // Agregar elementos al contenedor y luego al body
     contentWrapper.appendChild(happyMessage);
