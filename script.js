@@ -1,4 +1,4 @@
- // Esperar a que el DOM cargue completamente
+// Esperar a que el DOM cargue completamente
 document.addEventListener("DOMContentLoaded", function () {
     let discoverBtn = document.getElementById("discover");
     let message = document.getElementById("message");
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     alert("¡Sabía que dirías que sí! 💖");
 
     // Cambia el fondo de la página
-    document.body.style.backgroundImage = "url('snoopyfeliz.jpg')";
+    document.body.style.backgroundImage = "url('snoopyfeliz.jpgg')";
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundPosition = "center";
 
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".card p").style.display = "none";
     document.querySelector("#options").style.display = "none";
 
-    
+   
 });
         // Evento cuando se presiona "No"
         noBtn.addEventListener("click", function () {
@@ -103,9 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Evento para el botón "Sí"
   yesButton.addEventListener("click", function () {
-  message.style.display = "none"; // Oculta los mensajes de "No"
-  message.innerText = ""; // Borra cualquier mensaje previo
-  console.log("Botón 'Sí' presionado");
+    console.log("Botón 'Sí' presionado");
 
     // Detener la música triste
     soundNo.pause();
@@ -148,33 +146,13 @@ document.addEventListener("DOMContentLoaded", function () {
     happyImage.style.width = "300px";
     happyImage.style.borderRadius = "20px";
     happyImage.style.boxShadow = "5px 5px 15px rgba(0, 0, 0, 0.5)";
-       // Nuevo mensaje bonito sobre la imagen
-    let loveMessage = document.createElement("p");
-    loveMessage.innerHTML = "Te quiero mucho, Eve 💖💕";
-    loveMessage.style.fontSize = "1.5rem";
-    loveMessage.style.fontFamily = "cursive";
-    loveMessage.style.marginTop = "20px";
-    loveMessage.style.animation = "fadeIn 3s ease-in-out infinite alternate";
-
-    // Agregar animación en CSS
-    let style = document.createElement("style");
-    style.innerHTML = 
-        @keyframes fadeIn {
-            from { opacity: 0.3; }
-            to { opacity: 1; }
-        }
-    ;
-    document.head.appendChild(style);
 
     // Agregar elementos al contenedor y luego al body
     contentWrapper.appendChild(happyMessage);
     contentWrapper.appendChild(happyImage);
     document.body.appendChild(contentWrapper);
   });
-});
-
-
-
+}); 
 
 
 
