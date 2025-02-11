@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     let soundNo = new Audio("Besos_Usados.mp3");
     let soundYes = new Audio("cortado.mp3");
-    let imageSrc = "snoopyfeliz.jpg";
+    let imageSrc = "eve.jpg";
 
     let backgroundImages = ["gatoxd.jpg", "tite.jpeg", "wtf.jpeg"];
     let messages = [
