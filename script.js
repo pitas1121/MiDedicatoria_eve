@@ -16,10 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Evento cuando se presiona "Sí"
         yesBtn.addEventListener("click", function () {
-            alert("¡Sabía que dirías que sí! 💖");
-            document.body.style.backgroundColor = "pink"; // Efecto visual
-        });
-
+           alert("¡Sabía que dirías que sí! 💖");
+    document.body.style.backgroundColor = "pink"; // Cambia el fondo
+    document.body.style.backgroundImage = "url('URL_DE_TU_NUEVA_IMAGEN')"; // Cambia la imagen de fondo
+});
         // Evento cuando se presiona "No"
         noBtn.addEventListener("click", function () {
             alert("😢 Bueno... lo intentaré de nuevo otro día.");
