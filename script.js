@@ -28,9 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".card p").style.display = "none";
     document.querySelector("#options").style.display = "none";
 
-    // Reproduce la música
-    let audio = new Audio("cortado.mp3");
-    audio.play();
+    
 });
         // Evento cuando se presiona "No"
         noBtn.addEventListener("click", function () {
