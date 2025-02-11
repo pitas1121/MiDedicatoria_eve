@@ -15,10 +15,22 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         // Evento cuando se presiona "Sí"
-        yesBtn.addEventListener("click", function () {
-           alert("¡Sabía que dirías que sí! 💖");
-    document.body.style.backgroundColor = "pink"; // Cambia el fondo
-    document.body.style.backgroundImage = "url('snoopyfeliz.jpg')"; 
+       yesBtn.addEventListener("click", function () {
+    alert("¡Sabía que dirías que sí! 💖");
+
+    // Cambia el fondo de la página
+    document.body.style.backgroundImage = "url('snoopyfeliz.jpgg')";
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundPosition = "center";
+
+    // Oculta el mensaje principal y los botones
+    document.querySelector(".card h1").style.display = "none";
+    document.querySelector(".card p").style.display = "none";
+    document.querySelector("#options").style.display = "none";
+
+    // Reproduce la música
+    let audio = new Audio("cortado.mp3");
+    audio.play();
 });
         // Evento cuando se presiona "No"
         noBtn.addEventListener("click", function () {
