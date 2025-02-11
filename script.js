@@ -3,46 +3,16 @@ let yesButton = document.getElementById("yes");
 let noButton = document.getElementById("no");
 let message = document.getElementById("message");
 let title = document.querySelector("h1");
-let paragraph = document.querySelector(".card p"); // Selecciona el párrafo principal
-let container = document.querySelector(".container"); // Contenedor principal
-let backgroundImages = ["gatoxd.jpg", "tite.jpeg", "wtf.jpeg"];
-let messages = ["¿Estás segura de esto?", "Piensa bien tu decisión...", "Todavía puedes cambiar de opinión...", "Esto duele... 💔", "No lo hagas... 😭", "Me estás rompiendo el corazón..."];
+let paragraph = document.querySelector(".card p"); 
+let container = document.querySelector(".container"); 
 let soundNo = new Audio("Besos_Usados.mp3");
-let soundYes = new Audio("cortado.mp3"); // Sonido cuando presionan "Sí"
-let imageSrc = "snoopyfeliz.jpg"; // Imagen para cuando presionen "Sí"
-let currentImageIndex = 0;
-let currentMessageIndex = 0;
-let growthFactor = 1.2;
-let firstClick = true;
-
-// Evento para el botón "No"
-noButton.addEventListener("click", function () {
-  document.body.style.backgroundImage = `url('${backgroundImages[currentImageIndex]}')`;
-  currentImageIndex = (currentImageIndex + 1) % backgroundImages.length;
-
-  if (firstClick) {
-    title.style.display = "none";
-    paragraph.style.display = "none";
-    message.innerText = messages[currentMessageIndex];
-    soundNo.play();
-    firstClick = false;
-  } else {
-    currentMessageIndex = (currentMessageIndex + 1) % messages.length;
-    message.innerText = messages[currentMessageIndex];
-
-    let currentFontSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
-    let newFontSize = currentFontSize * growthFactor;
-    yesButton.style.fontSize = newFontSize + "px";
-    yesButton.style.padding = `${newFontSize / 3}px ${newFontSize / 2}px`;
-
-    if (newFontSize > 100) {
-      noButton.style.display = "none";
-    }
-  }
-});
+let soundYes = new Audio("cortado.mp3"); 
+let imageSrc = "snoopyfeliz.jpg"; 
 
 // Evento para el botón "Sí"
 yesButton.addEventListener("click", function () {
+  console.log("¡Botón 'Sí' presionado!"); // Verificar que el evento se ejecuta
+
   // Detener la música triste
   soundNo.pause();
   soundNo.currentTime = 0;
@@ -50,7 +20,8 @@ yesButton.addEventListener("click", function () {
   // Reproducir la música feliz
   soundYes.play();
 
-  // Ocultar todos los elementos dentro del contenedor
+  // Ocultar el fondo y el contenido
+  document.body.style.backgroundImage = "none"; 
   container.style.display = "none";
   message.style.display = "none";
   noButton.style.display = "none";
@@ -75,22 +46,15 @@ yesButton.addEventListener("click", function () {
   // Crear y mostrar la imagen en pantalla
   let happyImage = document.createElement("img");
   happyImage.src = imageSrc;
-  happyImage.style.width = "60vw"; // Ajustar el tamaño de la imagen
-  happyImage.style.borderRadius = "20px"; // Bordes redondeados
+  happyImage.style.width = "60vw";
+  happyImage.style.borderRadius = "20px"; 
   happyImage.style.boxShadow = "5px 5px 15px rgba(0, 0, 0, 0.5)";
-  happyImage.style.marginTop = "20px"; // Espacio entre el mensaje y la imagen
+  happyImage.style.marginTop = "20px"; 
 
   // Agregar elementos al contenedor y luego a la página
   contentWrapper.appendChild(happyMessage);
   contentWrapper.appendChild(happyImage);
   document.body.appendChild(contentWrapper);
-});
-
-// Evento para el botón "Tócame"
-document.getElementById("discover").addEventListener("click", function () {
-  document.getElementById("message").style.display = "block";
-  document.getElementById("options").style.display = "flex";
-  this.style.display = "none";
 });
 
 
