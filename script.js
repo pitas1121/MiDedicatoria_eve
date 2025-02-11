@@ -8,8 +8,8 @@ let container = document.querySelector(".container"); // Contenedor principal
 let backgroundImages = ["gatoxd.jpg", "tite.jpeg", "wtf.jpeg"];
 let messages = ["¿Estás segura de esto?", "Piensa bien tu decisión...", "Todavía puedes cambiar de opinión...", "Esto duele... 💔", "No lo hagas... 😭", "Me estás rompiendo el corazón..."];
 let soundNo = new Audio("Besos_Usados.mp3");
-let soundYes = new Audio("cortado.mp3"); // Sonido para cuando presionan "Sí"
-let videoSrc = "videofeliz1.mp4"; // Ruta del video
+let soundYes = new Audio("cortado.mp3"); // Sonido cuando presionan "Sí"
+let imageSrc = "imagenfeliz.jpg"; // Imagen para cuando presionen "Sí"
 let currentImageIndex = 0;
 let currentMessageIndex = 0;
 let growthFactor = 1.2;
@@ -53,31 +53,30 @@ yesButton.addEventListener("click", function () {
   // Ocultar todo el contenido de la página
   container.style.display = "none";
 
-  // Crear un mensaje arriba del video
-  let videoMessage = document.createElement("h2");
-  videoMessage.innerText = "¡Sabía que dirías que sí! ❤️";
-  videoMessage.style.position = "fixed";
-  videoMessage.style.top = "10%";
-  videoMessage.style.left = "50%";
-  videoMessage.style.transform = "translateX(-50%)";
-  videoMessage.style.color = "white";
-  videoMessage.style.fontSize = "2rem";
-  videoMessage.style.fontFamily = "Arial, sans-serif";
-  videoMessage.style.textShadow = "2px 2px 5px rgba(0,0,0,0.5)";
-  document.body.appendChild(videoMessage);
+  // Crear un mensaje bonito arriba de la imagen
+  let happyMessage = document.createElement("h2");
+  happyMessage.innerText = "¡Sabía que dirías que sí! ❤️";
+  happyMessage.style.position = "fixed";
+  happyMessage.style.top = "10%";
+  happyMessage.style.left = "50%";
+  happyMessage.style.transform = "translateX(-50%)";
+  happyMessage.style.color = "white";
+  happyMessage.style.fontSize = "2rem";
+  happyMessage.style.fontFamily = "Arial, sans-serif";
+  happyMessage.style.textShadow = "2px 2px 5px rgba(0,0,0,0.5)";
+  document.body.appendChild(happyMessage);
 
-  // Crear y mostrar el video en pantalla
-  let video = document.createElement("video");
-  video.src = videoSrc;
-  video.autoplay = true;
-  video.controls = true;
-  video.style.position = "fixed";
-  video.style.top = "50%";
-  video.style.left = "50%";
-  video.style.transform = "translate(-50%, -50%)";
-  video.style.width = "80vw";
-  video.style.height = "auto";
-  document.body.appendChild(video);
+  // Crear y mostrar la imagen en pantalla
+  let happyImage = document.createElement("img");
+  happyImage.src = imageSrc;
+  happyImage.style.position = "fixed";
+  happyImage.style.top = "50%";
+  happyImage.style.left = "50%";
+  happyImage.style.transform = "translate(-50%, -50%)";
+  happyImage.style.width = "60vw"; // Ajustar el tamaño de la imagen
+  happyImage.style.borderRadius = "20px"; // Bordes redondeados
+  happyImage.style.boxShadow = "5px 5px 15px rgba(0, 0, 0, 0.5)";
+  document.body.appendChild(happyImage);
 });
 
 // Evento para el botón "Tócame"
