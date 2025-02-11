@@ -169,6 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Agregar elementos al contenedor y luego al body
     contentWrapper.appendChild(happyMessage);
     contentWrapper.appendChild(happyImage);
+    contentWrapper.appendChild(loveMessage);
     document.body.appendChild(contentWrapper);
   });
 });
