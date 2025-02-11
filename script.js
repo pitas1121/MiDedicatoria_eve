@@ -103,7 +103,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Evento para el botón "Sí"
   yesButton.addEventListener("click", function () {
-    console.log("Botón 'Sí' presionado");
+  message.style.display = "none"; // Oculta los mensajes de "No"
+  message.innerText = ""; // Borra cualquier mensaje previo
+  console.log("Botón 'Sí' presionado");
 
     // Detener la música triste
     soundNo.pause();
